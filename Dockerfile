@@ -5,7 +5,7 @@ LABEL maintainer "Michael Molchanov <mmolchanov@adyax.com>"
 USER root
 
 # Install nodejs and grunt.
-RUN apk add --update --no-cache nodejs nodejs-dev yarn \
+RUN apk add --update --no-cache nodejs nodejs-dev nodejs-npm yarn \
   && rm -rf /var/cache/apk/* \
   && npm install -g gulp-cli grunt-cli \
   && grunt --version \
